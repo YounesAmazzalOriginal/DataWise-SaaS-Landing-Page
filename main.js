@@ -15,6 +15,7 @@ window.onload = function () {
   if (savedCssFile) {
     styleCss.href = savedCssFile;
   }
+github
 
   var headerSingleImageContainer = document.querySelector(
     "header .header-image-container div"
