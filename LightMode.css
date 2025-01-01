@@ -219,6 +219,7 @@ nav .theme-button {
   margin: 10px;
   outline: var(--lightGray) solid 10px;
 }
+
 /* /Nav Bar */
 
 /* ================================== */
@@ -226,7 +227,7 @@ nav .theme-button {
 /* Header */
 header {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   padding-inline: 100px;
   justify-content: space-between;
   gap: 10px;
@@ -672,6 +673,9 @@ footer ul:hover p:not(:hover) {
   color: white;
   font-size: 1rem;
 }
+.theme-button-mobile{
+  display: none;
+}
 /* /Elements Not Show On Desktop View */
 
 /* ================================== */
@@ -808,6 +812,12 @@ footer ul:hover p:not(:hover) {
   nav {
     display: none;
   }
+  .light-nav-logo {
+    display: none;
+  }
+  .dark-nav-logo {
+    display: block;
+  }
   /* /Nav Bar */
 
   /* ================================== */
@@ -851,6 +861,10 @@ footer ul:hover p:not(:hover) {
     width: 20px;
     font-size: 1.2rem;
   }
+  #mobile-nav .visible-part .open-mobile-nav i {
+    color: var(--background);
+    filter: invert();
+  }
 
   #mobile-nav .unvisible-part {
     font-size: 0.8rem;
@@ -882,10 +896,12 @@ footer ul:hover p:not(:hover) {
     gap: 20px;
     border-bottom: 1px solid var(--lightGray);
     border-top: 1px solid var(--lightGray);
+    color: var(--text-header);
   }
   #mobile-nav .title i {
     font-size: 0.85rem !important;
     transition: 0.4s;
+    color: var(--text-header);
   }
   #mobile-nav .title:first-child {
     border-top: 1px solid var(--lightGray);
@@ -911,6 +927,7 @@ footer ul:hover p:not(:hover) {
     display: grid;
     gap: 10px;
     transition: 0.4s;
+    color: var(--text-header);
   }
   #mobile-nav .unvisible-part .menu .submenu p:hover {
     background-color: var(--lightGray);
@@ -932,6 +949,8 @@ footer ul:hover p:not(:hover) {
     justify-content: center;
     gap: 50px;
     margin-top: 20px;
+
+    flex-direction: column;
   }
   header .header-text-container {
     width: 100%;
@@ -1112,4 +1131,21 @@ footer ul:hover p:not(:hover) {
     font-size: 1rem;
   }
   /* /Footer Media */
+
+  .theme-button-mobile {
+    display: block;
+    background-color: var(--lightGray2);
+    color: var(--paragraph);
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    z-index: 100;
+    font-size: 0.8rem;
+
+    position: fixed;
+    top: 80%;
+    left: 0px;
+    margin: 10px;
+    outline: var(--lightGray) solid 2px;
+  }
 }
